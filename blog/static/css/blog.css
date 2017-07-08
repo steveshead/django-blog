@@ -25,6 +25,16 @@ p.welcome {
   margin-right: 10px;
 }
 
+.login-form label {
+  font-family: 'Helvetica Neue', sans-serif;
+    margin-bottom: 10px;
+}
+
+.login-form input {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 .page-header {
     background-color: #bf360c;
     margin-top: 0;

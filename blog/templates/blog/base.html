@@ -33,12 +33,11 @@
 
               <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}
-
            <li><a href="{% url 'post_new' %}" class="btn btn-dark-orange">New Post</a></li>
             <li><a href="{% url 'post_draft_list' %}" class="btn btn-dark-orange">Edit Post</a></li>
-            <li><a href="{% url 'logout' %}" class="btn btn-dark-orange">Log Out</a></li>
             {% else %}
-            <li><a href="{% url 'login' %}" class="btn btn-dark-orange">Log In</a></li>
+            <li><a href="{% url 'signup' %}" class="btn btn-dark-orange">Sign Up</a></li>
+            <li><a href="{% url 'login' %}" class="btn btn-dark-orange">Sign In</a></li>
             {% endif %}
 
               </ul>
@@ -50,7 +49,7 @@
         <div class="container">
           <div class="row">
           {% if user.is_authenticated %}
-              <p class="welcome">Welcome {{ user.username }}</p>
+              <p class="welcome">Welcome {{ user.username }} - <a href="{% url 'logout' %}" class="btn btn-sm btn-default">Sign Out</a></p>
           {% endif %}
           <h1><a href="/">Django Blog</a></h1>
         </div>
