@@ -25,12 +25,12 @@ p.welcome {
   margin-right: 10px;
 }
 
-.login-form label {
+label {
   font-family: 'Helvetica Neue', sans-serif;
     margin-bottom: 10px;
 }
 
-.login-form input {
+input {
   margin-left: 10px;
   margin-bottom: 10px;
 }
