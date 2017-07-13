@@ -1,11 +1,11 @@
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 300;
+  font-family: 'Helvetica Neue', sans-serif !important;
+  font-weight: 300 !important;
 }
 
 a {
-  color: #FCA205;
+  color: #bf360c !important;
   -moz-transition: ease 0.6s;
   -webkit-transition: ease 0.6s;
   -o-transition: ease 0.6s;
@@ -13,8 +13,14 @@ a {
   transition: ease 0.6s;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #FCA205 !important;
+}
+
 h1 a {
-    color: #FCA205;
+  color: #fff !important;
+  font-weight: 300;
 }
 
 p.welcome {
@@ -89,14 +95,15 @@ h1, h2, h3, h4 {
 
 .post h1 {
   margin-bottom: 0;
+  font-weight: 300;
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #333;
+    color: #bf360c !important;
 }
 
 .post h1 a:hover {
-  color: #bf360c;
+  color: #FCA205 !important;
   text-decoration: none;
 }
 
