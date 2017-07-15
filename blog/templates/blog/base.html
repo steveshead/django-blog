@@ -35,6 +35,8 @@
             {% if user.is_authenticated %}
            <li><a href="{% url 'post_new' %}" class="btn btn-outline">New Post</a></li>
             <li><a href="{% url 'post_draft_list' %}" class="btn btn-outline">Edit Post</a></li>
+            <li><a href="{% url 'profile' user.username %}" class="btn btn-outline">Profile</a></li>
+
             {% else %}
             <li><a href="{% url 'signup' %}" class="btn btn-outline">Sign Up</a></li>
             <li><a href="{% url 'login' %}" class="btn btn-outline">Sign In</a></li>

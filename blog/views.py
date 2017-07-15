@@ -35,7 +35,7 @@ def edit_user(request, pk):
                 if formset.is_valid():
                     created_user.save()
                     formset.save()
-                    return redirect('/')
+                    return render(request, 'registration/profile.html')
 
         return render(request, "registration/account_update.html", {
             "noodle": pk,
@@ -44,6 +44,10 @@ def edit_user(request, pk):
         })
     else:
         raise PermissionDenied
+
+def profile(request, username):
+    user = get_object_or_404(User.objects, username=username)
+    return render(request, 'registration/profile.html', {'username':username})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
